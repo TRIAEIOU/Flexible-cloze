@@ -1,0 +1,83 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Create output dirs",
+            "type": "shell",
+            "command": "Write-host Creating output directories... ; md -Force ./bin, ./dist | Out-Null",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "presentation": {
+                "echo": false,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            }
+        },
+        {
+            "label": "Build clean",
+            "type": "shell",
+            "command": "Write-host Building clean... ; rm -R -Force ./dist/*, ./bin/*",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "presentation": {
+                "echo": false,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            }
+        },
+        {
+            "label": "Build bin",
+            "type": "shell",
+            "command": "Write-host Building bin... ; cp ./src/__init__.py, ./src/fcz-front.html, ./src/fcz-back.html, ./src/fcz.css ./bin",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "dependsOn": [
+                "Create output dirs"
+            ],
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            }
+        },
+        {
+            "label": "Build update",
+            "type": "shell",
+            "command": "Write-host Building update... ; rm -R -Force ./dist/*; rm -R -Force ./__pycache__; Get-ChildItem -Path ./bin/*, ./README.md, ./LICENSE, ./update | Compress-Archive -Force -DestinationPath ./dist/update.zip; pandoc -t ${env:CODEPATH}/pandoc/anki-addon.lua --abbreviations=${env:CODEPATH}/pandoc/empty -f markdown+link_attributes ./README.md -o ./dist/update.txt | Out-Null",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "dependsOn": [
+                "Create output dirs",
+                "Build bin"
+            ],
+            "presentation": {
+                "echo": false,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            }
+        },
+        {
+            "label": "Build all",
+            "dependsOn": [
+                "Build bin",
+                "Build update"
+            ]
+        }
+    ]
+}

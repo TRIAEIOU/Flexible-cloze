@@ -107,7 +107,7 @@ def update():
 
         # Failed to parse existing install
         if not (cfront_parts and cback_parts and ccss_parts):
-            ans = QMessageBox.critical(mw, 'FCZ update error - overwrite current template?', f'''<div style="text-align: left">Current "Flexible cloze" card template corrupt.
+            ans = QMessageBox.critical(mw, 'FCZ update error - overwrite current template?', '''<div style="text-align: left">Current "Flexible cloze" card template corrupt.
             <ul><li>Press "Yes" to completely overwrite current template (temporary backups created in add-on folder).</li>
             <li>Press "No" to manually correct template from add-on folder.</li>
             <li>Press "Cancel" to delay update attempt (the update dialog will resume next Anki restart).</li></ul></div>''', QMessageBox.Yes | QMessageBox.No | QMessageBox.Cancel)
