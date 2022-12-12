@@ -26,7 +26,8 @@ Flexible cloze is an [Anki addon](https://ankiweb.net/shared/info/1632356464) fo
   - `none`: no scroll
   - `min`: scrolls as little as possible to get active cloze(s) into view
   - `center`: centers the active clozes in the vindow.
-  - `context`: scroll to center (above) if this means the line following the preceding cloze will be visible, otherwise scroll to the line following the preceding cloze (i.e. show all of the cloze context) - this may result in the current cloze being below the screen.
+  - `context`: scroll to center (above) if this means the line following the preceding cloze will be visible, otherwise scroll to the line following the preceding cloze (i.e. show the cloze context) - this may result in the current cloze being below the screen.
+  - `chapter-context`: scroll to center (above) if this means the line following the preceding cloze will be visible, otherwise scroll to preceding `<hr>` or `<h1>`-`<h6>` or top of card (i.e. show all of the "chapter") - this may result in the current cloze being below the screen.
   - Scroll on initial show/flip: `context`, `center`, `min` or `none`.
   - Scroll on iterate (pressing next key etc.): `iterate-center`, `iterate-min` or `iterate-none`.
   - Scroll on click: `click-center`, `click-min` or `click-none`.

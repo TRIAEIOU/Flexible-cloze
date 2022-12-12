@@ -1,4 +1,4 @@
-/*-- FCZ 1632356464 BEGIN [1.12] --*/
+/*-- FCZ 1632356464 BEGIN [1.13] --*/
 /*-- FUNCTIONALITY BEGIN --*/
 /* Content between FCZ begin and end will be overwritten on add-on update. As updates will not update the styling and layout for existing users the latest default version of layout and complete styling can be found in the addon directory */
 .card
@@ -9,21 +9,21 @@
 
 #fcz-title, #title { flex: 0 0; }
 #fcz-scroll-area { flex: 1 1; display: flex; flex-flow: column nowrap; overflow: auto; }
-    #fcz-content { flex: 1 1; }
-    #fcz-additional { flex: 0 0; z-index: 2; }
-        .additional-header { cursor: pointer; }
+  #fcz-content { flex: 1 1; }
+  #fcz-additional { flex: 0 0; z-index: 2; }
+    .additional-header { cursor: pointer; }
 #fcz-show-all { flex: 0 0; cursor: pointer; }
 
 #fcz-footer { flex: 0 0; z-index: 2; }
-	#fcz-legend-footer { display: flex; flex-flow: row nowrap; }
-		.fcz-legend-entry, #fcz-legent-entry {flex: 1 1;}
-	#fcz-flag-footer { display: flex; flex-flow: row nowrap }
-		.fcz-flag { flex: 1 1 100%; }
+  #fcz-legend-footer { display: flex; flex-flow: row nowrap; }
+    .fcz-legend-entry, #fcz-legent-entry {flex: 1 1;}
+  #fcz-flag-footer { display: flex;   flex-flow: row nowrap }
+    .fcz-flag { flex: 1 1 100%; }
 
 #nav-toggle-all { position: fixed; top: 0; left: 0; right: 0;  z-index: 1; }
 #nav-prev-cloze { position: fixed;  top: 0; left: 0; bottom: 0;  z-index: 1; }
 #nav-next-cloze { position: fixed;  top: 0; right: 0; bottom: 0;  z-index: 1; }
-	
+
 .fcz-hide   { display: none; }
 .fcz-show   { display: block; }
 /*-- FUNCTIONALITY END --*/
@@ -56,7 +56,7 @@ Below are configurations for the look and feel, changing/deleting these values w
     --inactive-prompt: ;
     --active-prompt: ;
     --expose: ! begin;
-    --scroll: front-context back-min iterate-min click-min;
+    --scroll: front-chapter-context back-center iterate-min click-min;
     --iterate: active hide loop top;
     --key-next-cloze: j;
     --key-previous-cloze: h;
@@ -257,3 +257,6 @@ b { font-weight: bolder; }
 /* Definition lists formating */
 dt { font-weight: bold; }
 dd { margin-bottom: 10px; }
+
+/*:not(html.android) div.ankidroid {display: none;}*/
+.mobile div.desktop {display: none;}
