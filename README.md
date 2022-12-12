@@ -134,3 +134,4 @@ There is effectively no add-on, it's all JavaScript (and HTML/CSS) and runs 100%
 - 2022-03-06: Allow separate scroll behaviour on card show/flip, on cloze click and on next/previous iteration (--scroll, --scroll-iterate, --scroll-click: "none"/"min"/"center"). Replace --iterate-inactive option with --iterate: "active"/"inactive"/"all" to allow more fine grained customization.
 - 2022-05-27: Configuration options and internal logic becoming a bit of a mess, reworked so to new configuration options which unfortunately requires updates to new format to adapt old styles to the new format (see instructions above for use).
 - 2022-10-16: Add `context` scrolling option.
+- 2022-12-12: Add `chapter-context` scrolling option, scroll caused code refactor.
