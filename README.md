@@ -6,7 +6,7 @@ Flexible cloze is an [Anki addon](https://ankiweb.net/shared/info/1632356464) fo
 
 **ALL CREDIT FOR INNOVATION GOES TO TRGANKI AND RISINGORANGE**
 
-![screenshot](https://github.com/TRIAEIOU/Flexible-cloze/blob/main/Screenshots/front-and-back.png){height=500px}
+![screenshot](https://github.com/TRIAEIOU/Flexible-cloze/raw/main/Screenshots/front-and-back.png){height=500px}
 
 ## General
 

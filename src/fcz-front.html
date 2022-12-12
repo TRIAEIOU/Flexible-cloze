@@ -483,7 +483,6 @@
         })
 
         fcz.viewport.replaceChild(fcz.content, document.getElementById('fcz-content'))
-        document.querySelector('div#fcz-title').innerHTML = document.readyState
         if(document.readyState === 'complete') scroll_init(false)
         else window.addEventListener('load', scroll_init)
         // Init done
