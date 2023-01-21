@@ -1,5 +1,7 @@
 # Flexible cloze
 
+**\*\*\*DISCONTINUATION NOTICE: From Anki 2.1.56 Flexible cloze has been superseeded by [Flexible cloze 2](https://ankiweb.net/shared/info/1889069832), no further updates will be made to this version of Flexible cloze\*\*\***
+
 Flexible cloze is an [Anki addon](https://ankiweb.net/shared/info/1632356464) for a configurable cloze note type for keeping related information (and cards) on the same note ([Anki forum thread](https://forums.ankiweb.net/t/flexible-cloze-support-thread/14504)).
 
 **Ideas for the functionality of this cloze variant blatantly stolen from trgkanki's Cloze (Hide all) [https://ankiweb.net/shared/info/1709973686] and RisingOrange's Enhanced Cloze (for Anki 2.1) [https://ankiweb.net/shared/info/1990296174] - both of which are excellent addons. However all code written from scratch (ok, I peeked at some other code).**
@@ -135,3 +137,4 @@ There is effectively no add-on, it's all JavaScript (and HTML/CSS) and runs 100%
 - 2022-05-27: Configuration options and internal logic becoming a bit of a mess, reworked so to new configuration options which unfortunately requires updates to new format to adapt old styles to the new format (see instructions above for use).
 - 2022-10-16: Add `context` scrolling option.
 - 2022-12-12: Add `chapter-context` scrolling option, scroll caused code refactor.
+- 2023-01-21: All development moved to [Flexible cloze 2](https://ankiweb.net/shared/info/1889069832).
